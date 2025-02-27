@@ -6,7 +6,8 @@
     <title>Instagram Photo Feed con Bootstrap</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-</head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css" integrity="sha512-9xKTRVabjVeZmc+GUW8GgSmcREDunMM+Dt/GrzchfN8tkwHizc5RP4Ok/MXFFy5rIjJjzhndFScTceq5e6GvVQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
 
 <body>
 <!-- Navegador -->
@@ -20,7 +21,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <button type="button" class="btn btn-primary ms-auto m-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <button type="button" class="btn btn-success ms-auto m-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
                     Create a new post
                 </button>
                 <div class="dropdown-center me-3">
@@ -28,41 +29,44 @@
                         aria-expanded="false">
                         <span class="fa-solid fa-gear"></span>
                     </button>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Action two</a></li>
-                        <li><a class="dropdown-item" href="#">Action three</a></li>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" href="#">Profile</a></li>
+                        <li><a class="dropdown-item" href="#">Accesibility</a></li>
+                        <li><a class="dropdown-item" href="#">Privacy and data</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
                     </ul>
                 </div>
             </div>
         </div>
     </nav>
 <!-- selector de imagenes -->
-    <ul class="nav nav-tabs" id="myTab" role="tablist" style="justify-content: center;">
+    <ul class="nav nav-pills justify-content-center mt-3" id="myTab" role="tablist">
         <li class="nav-item" role="presentation">
-          <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true"><i class="fa-solid fa-calendar-days "></i></button>
+          <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true"><i class="fa-solid fa-grip "></i></button>
         </li>
         <li class="nav-item" role="presentation">
-          <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false"><i class="fa-solid fa-calendar"></i></button>
+          <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false"><i class="fa-solid fa-square"></i></button>
         </li>
       </ul>
 
         <!-- selector de imagenes varias-->
-        <div class="tab-content" id="myTabContent" style="padding-top: 0.5rem;"></div>
+        <div class="tab-content pt-2" id="myTabContent" >
         <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0"> 
-          <img src="https://picsum.photos/613" class="object-fit-none border rounded" alt="fotos aleatorias" style="margin: 0.5rem;">
-          <img src="https://picsum.photos/613" class="object-fit-none border rounded" alt="fotos aleatorias" style="margin: 0.5rem;">
-          <img src="https://picsum.photos/613" class="object-fit-none border rounded" alt="fotos aleatorias" style="margin: 0.5rem;">
-          <img src="https://picsum.photos/613" class="object-fit-none border rounded" alt="fotos aleatorias" style="margin: 0.5rem;">
-          <img src="https://picsum.photos/613" class="object-fit-none border rounded" alt="fotos aleatorias" style="margin: 0.5rem;">
-          <img src="https://picsum.photos/613" class="object-fit-none border rounded" alt="fotos aleatorias" style="margin: 0.5rem;">
+          <img src="https://picsum.photos/613" class="object-fit-none border rounded m-2" alt="fotos aleatorias" >
+          <img src="https://picsum.photos/613" class="object-fit-none border rounded m-2" alt="fotos aleatorias" >
+          <img src="https://picsum.photos/613" class="object-fit-none border rounded m-2" alt="fotos aleatorias" >
+          <img src="https://picsum.photos/613" class="object-fit-none border rounded m-2" alt="fotos aleatorias" >
+          <img src="https://picsum.photos/613" class="object-fit-none border rounded m-2" alt="fotos aleatorias" >
+          <img src="https://picsum.photos/613" class="object-fit-none border rounded m-2" alt="fotos aleatorias" >
         </div>
+      </div>
 
         <!-- selector de postales lineal-->
-        <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0" style="justify-items: anchor-center;">
-          <div class="card" style="width: 25rem; margin: 0.5rem;">
+        <div class=" tab-pane fade d-flex flex-column align-items-center" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+          <div class="card m-2" style="width: 25rem;">
             <div class="card">
-              <div class="card_header" style="display: flex; justify-content: space-between; margin: 0.5rem;">
+              <div class="card-header d-flex justify-content-between m-2">
               <h5 class="card-title">Imagenes Random</h5>
               <p>1/3</p>
             </div>
@@ -74,9 +78,9 @@
             </div>
           </div>
 
-          <div class="card" style="width: 25rem; margin: 0.5rem;">
+          <div class="card m-2" style="width: 25rem;">
             <div class="card">
-              <div class="card_header" style="display: flex; justify-content: space-between; margin: 0.5rem;">
+              <div class="card-header d-flex justify-content-between m-2">
               <h5 class="card-title">Imagenes Random</h5>
               <p>2/3</p>
             </div>
@@ -88,9 +92,9 @@
             </div>
           </div>
 
-          <div class="card" style="width: 25rem; margin: 0.5rem;">
+          <div class="card m-2" style="width: 25rem;">
             <div class="card">
-              <div class="card_header" style="display: flex; justify-content: space-between; margin: 0.5rem;">
+              <div class="card-header d-flex justify-content-between m-2">
               <h5 class="card-title">Imagenes Random</h5>
               <p>3/3</p>
             </div>
@@ -111,20 +115,28 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Create a new post</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          ...
+          <form>
+            <label>
+              Caption:
+              <Textarea class="form-control" cols="100"></Textarea>
+            </label>
+          </form>
+          <div class="d-grid gap-2 d-md-block">
+            <button class="fa-solid fa-camera btn btn-secondary-outline border border-1" type="button"></button>
+            <button class="fa-solid fa-location-dot btn btn-secondary-outline border border-1" type="button"></button>
+          </div>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
+          <button type="button" class="btn btn-success">Publish</button>
         </div>
       </div>
     </div>
   </div>
-    
 
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
